@@ -140,9 +140,7 @@ a[href] {
 }
 
 a[href]:hover {
-  background-color: white;
-  color: var(--color-primary);
-  transition: all 0.2s
+  border-spacing: none;
 }
 
 ul {
