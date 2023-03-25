@@ -139,6 +139,12 @@ a[href] {
   text-decoration: none;
 }
 
+a[href]:hover {
+  background-color: white;
+  color: var(--color-primary);
+  transition: all 0.2s
+}
+
 ul {
   list-style-type: none;
 }
