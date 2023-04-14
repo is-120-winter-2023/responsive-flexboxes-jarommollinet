@@ -427,8 +427,13 @@ nav a {
     gap: 2rem;
   }
 
+  .panel .text-wrapper {
+    flex: 1 1 60%;
+ }
+
   .panel .image-wrapper {
     order: 0;
+    flex: 1 1 40%;
   }
 
   .panel .left {
