@@ -94,7 +94,7 @@ img[src$="svg"] {
 body {
   font-family: "DM Sans", sans-serif;
   color: var(--color-font);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: stretch;
 }
@@ -265,12 +265,15 @@ nav a {
   position: absolute;
   inset: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 6rem;
   color: white;
   mix-blend-mode: difference;
+}
+
+.hero h1 {
+  font-size: 10rem;
 }
 
 .video-background {
