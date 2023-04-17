@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/main.css">
   
-  <title>The Crab Hotline</title>
+  <title>Contact</title>
 </head>
 
 <body>
@@ -37,8 +37,30 @@
       </ul>
     </nav>
   </header>
-  <h1>Contact the Crab Himself</h1>
-  <img src="../images/contact.svg" alt="Contact info icon">
+  <div class="batman">
+    <h1>Request a free quote!</h1>
+  </div>
+  <div class="batman">
+    <img src="../images/contact.svg" alt="Contact info icon">
+  </div>
+
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address">
+  
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+  
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  
+  
   <script>
     const header = document.querySelector("header");
 

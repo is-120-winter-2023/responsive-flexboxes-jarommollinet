@@ -257,10 +257,52 @@ nav a {
 
 .hero {
   position: relative;
-  text-align: center;
+  overflow: hidden;
+  height: auto;
 }
 
-.hero img {
+.hero .text-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.video-background {
+  background: #000;
+  position: absolute;
+  inset: 0;
+  z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+/* .hero img {
   position: relative;
   width: 100%;
   height: auto;
@@ -291,7 +333,7 @@ nav a {
   font-size: 5vw;
   max-width: 80%;
   text-align: center;
-}
+} */
 
 .sr-only {
   clip: rect(1px, 1px, 1px, 1px);
@@ -372,8 +414,61 @@ nav a {
   margin-bottom: 1rem;
 }
 
+.panel p {
+  font-size: 2vw;
+}
+
 .panel .image-wrapper {
   order: -1;
+}
+
+.quotetext {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+  font-size: 3vw;
+}
+
+.quoteenter {
+  display: flex;
+  position: block;
+  align-items: center;
+  justify-content: center;
+}
+
+aside {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 10vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactbutton {
+  display: flex;
+  position: absolute;
+  color: var(--color-accent);
+  background-color: white;
+  border: solid 1px var(--color-accent);
+  padding: 1rem;
+  border-radius: 0.3em;
+  font-weight: 800;
+  max-width: 30%;
+  font-size: 1rem;
+  transition: background-color 300ms ease, color 300ms ease, border 300ms,
+    font-size 300ms;
+}
+
+.contactbutton:hover {
+  background-color: var(--color-accent);
+  color: white;
+  transition: background-color 300ms ease, color 300ms ease, border 300ms,
+    font-size 300ms;
 }
 
 @media (min-width: 401px) {
@@ -406,9 +501,9 @@ nav a {
   nav ul {
     flex-direction: row;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   nav a {
@@ -421,6 +516,65 @@ nav a {
   }
 }
 
+.batman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.contact-box {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  margin: 2rem auto;
+}
+
+.contact-box h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-box label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.contact-box button {
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-box button:hover {
+  background-color: #333;
+}
+
 @media (min-width: 801px) {
   .panel {
     flex-direction: row;
@@ -429,7 +583,7 @@ nav a {
 
   .panel .text-wrapper {
     flex: 1 1 60%;
- }
+  }
 
   .panel .image-wrapper {
     order: 0;
